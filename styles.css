@@ -10,6 +10,7 @@ body {
   font-family: Arial, sans-serif;
   color: #333;
   line-height: 1.6;
+  background-color: #f2f2f2;
 }
 
 img {
@@ -41,6 +42,7 @@ a:active {
 
 .section {
   padding: 4rem 0;
+  background-color: #ffffff;
 }
 
 .section-title {
@@ -81,6 +83,7 @@ a:active {
 /* Hero */
 .hero {
   padding: 4rem 0;
+  background-color: #d4e3ff;
 }
 
 .hero-content {
@@ -182,6 +185,10 @@ a:active {
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
+}
+
+#about {
+  background-color: #d4e3ff ;
 }
 
 /* Contact */
