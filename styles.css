@@ -12,6 +12,11 @@ body {
   line-height: 1.6;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 .container {
   width: 90%;
   max-width: 1100px;
@@ -43,6 +48,7 @@ body {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  
 }
 
 .nav-links a {
@@ -136,7 +142,17 @@ body {
   text-decoration: none;
   color: #333;
   border: 1px solid #333;
-  padding: 0.25rem 0.75rem;
+  padding: 0.4rem 0.75rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.project-links a:hover {
+  background-color: #2181ff;
+  color: #fff;
+}
+
+.project-links a:active {
+  transform: scale(0.98);
 }
 
 /* About */
@@ -152,4 +168,62 @@ body {
   justify-content: center;
   gap: 2rem;
   margin-top: 1rem;
+}
+
+@media (max-width: 767px) {
+
+  /* Navigation stacks */
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Hero stacks */
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Profile image shrinks slightly */
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* Projects become single column */
+  .projects-grid {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .hero-content {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .projects-grid {
+    flex-wrap: wrap;
+  }
+
+  .project-card {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .project-card {
+    flex: 1 1 calc(33.333% - 2rem);
+  }
+
+  .hero-text h2 {
+    font-size: 3rem;
+  }
 }
